@@ -1,0 +1,4 @@
+/vendor/
+/web/
+/site.composer.json
+/scripts/composer/SiteScriptHandler.php

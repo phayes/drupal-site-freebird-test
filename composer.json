@@ -1,0 +1,26 @@
+{
+    "name": "highwire/drupal-site-freebird-example",
+    "description": "Example site / pub repository for freebird",
+    "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "wikimedia/composer-merge-plugin": "dev-master"
+    },
+    "extra": {
+        "merge-plugin": {
+            "require": [
+                "site.composer.json"
+            ], 
+            "merge-extra": true,
+            "merge-extra-deep": true,
+            "merge-scripts": true
+        }
+    }, 
+    "scripts": {
+        "init": [
+            "wget -q -N https://raw.githubusercontent.com/highwire/composer/master/freebird/site.composer.json",
+            "wget -q -N -P scripts/composer/ https://raw.githubusercontent.com/highwire/composer/master/freebird/SiteScriptHandler.php"
+        ]
+    }
+}
